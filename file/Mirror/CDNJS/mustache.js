@@ -1,1 +1,0 @@
-/data/mirror/cdnjs/ajax/libs/mustache.js

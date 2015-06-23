@@ -1,1 +1,0 @@
-/data/mirror/cdnjs/ajax/libs/deck.js

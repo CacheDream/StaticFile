@@ -1,1 +1,0 @@
-/data/mirror/cdnjs/ajax/libs/p5.js
