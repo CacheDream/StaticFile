@@ -136,7 +136,7 @@ if(!empty($path)){
 		<meta name="author" content="ShareAny.com">
 		<meta name="keywords" content="<?php echo $configure["siteTitle"]; ?>,<?php echo $path; ?>">
 		<meta name="description" content="<?php echo $readme; ?>。<?php echo $path; ?>。<?php echo $configure["siteTitle"]; ?>。">
-        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://main.static.shareany.com/www/Home/image/favicon.ico">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://main.static.shareany.com/staticfile/favicon.ico">
         <style>
             .shareany_menu {
                 font-family: "Microsoft YaHei";
