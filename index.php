@@ -83,7 +83,7 @@ if(is_dir($directory)){
         else{
             $url = $configure["cdnRoot"].$path.$value;
             $code = "";
-            $extension = pathinfo($value)["extension"];
+            $extension = isset(pathinfo($value)["extension"])?pathinfo($value)["extension"]:'';
             if($extension == "js"){
                 $code = '<script src="'.$url.'"></script>';
             }
