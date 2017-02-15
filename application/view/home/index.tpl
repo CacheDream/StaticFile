@@ -2,16 +2,16 @@
 {block name=main}
     <link rel="stylesheet" href="{$static}/style/index.css">
         <table class="table table-hover table-bordered">
-            {*{if not empty($about)}*}
-                {*<tr class="active">*}
-                    {*<th colspan="3">*}
-                        {*{if not empty($logo)}*}
-                            {*<div><img src="{$root}file/{$path}/{$logo}" style="max-height:100px;width:auto;"></div>*}
-                        {*{/if}*}
-                        {*<div>{$about}</div>*}
-                    {*</th>*}
-                {*</tr>*}
-            {*{/if}*}
+            {if not empty($about)}
+                <tr class="active">
+                    <th colspan="3">
+                        {if not empty($logo)}
+                            <div style="text-align: center;"><img src="{$root}file/{$path}/{$logo}" style="max-height:100px;width:auto;"></div>
+                        {/if}
+                        <div>{$about}</div>
+                    </th>
+                </tr>
+            {/if}
             <tr class="active">
                 <th colspan="3">
                     <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;

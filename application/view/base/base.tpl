@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CodeMommy Static File</title>
+    <title>{$title}CodeMommy Static File</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodeMommy.com">
-    <meta name="keywords" content="CodeMommy Static File,">
-    <meta name="description" content="ShareAny Static File For Free Forever
-。ShareAny Static File。">
+    <meta name="keywords" content="CodeMommy Static File For Free Forever,{$keyword}">
+    <meta name="description" content="CodeMommy Static File For Free Forever. {$word}">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon"
           href="//static.shareany.com/public/favicon/favicon.ico">
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">

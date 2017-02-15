@@ -147,6 +147,9 @@ class HomeController extends BaseController
         $this->data['about'] = $about;
         $this->data['path'] = $path;
         $this->data['crumbs'] = $crumbs;
+        $this->data['keyword'] = str_replace('/', ',', $path);
+        $this->data['word'] = str_replace('/', ' ', $path);
+        $this->data['title'] = $this->data['word'];
         return $this->template('home/index');
     }
 }
