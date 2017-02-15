@@ -6,7 +6,7 @@
                 <tr class="active">
                     <th colspan="3">
                         {if not empty($logo)}
-                            <div style="text-align: center;"><img src="{$root}file/{$path}/{$logo}" style="max-height:100px;width:auto;"></div>
+                            <div style="text-align: center;"><img src="{$logo}" style="max-height:100px;width:auto;"></div>
                         {/if}
                         <div>{$about}</div>
                     </th>

@@ -105,14 +105,14 @@ class HomeController extends BaseController
         $list = array();
         $logo = null;
         $about = null;
+        $cdn = Config::get('application.cdn');
         foreach ($this->listFolder($pathLocal) as $pathFull => $file) {
             $array = array();
             $array['pathFull'] = $pathFull;
             $array['file'] = $file;
             $array['type'] = $this->getFileType($pathFull, $file);
-            $cdn = Config::get('application.cdn');
             if (empty($path)) {
-                    $array['link'] = Me::root() . '?path=' . $file;
+                $array['link'] = Me::root() . '?path=' . $file;
                 $array['cdn'] = $cdn . $file;
             } else {
                 $array['link'] = Me::root() . '?path=' . $path . '/' . $file;
@@ -121,7 +121,7 @@ class HomeController extends BaseController
             $list[$file] = $array;
             // 读取Logo
             if (strtolower($file) == 'logo.png') {
-                $logo = 'logo.png';
+                $logo = $cdn . $path . '/' . $file;
             }
             // 读取readme.txt
             if (strtolower($file) == 'readme.txt') {
@@ -133,11 +133,11 @@ class HomeController extends BaseController
         $crumbs['Root'] = '/?path=';
         if (!empty($path)) {
             $temp = explode('/', $path);
-            foreach ($temp as $key=>$value) {
-                if($key == 0){
-                    $crumbs[$value] = end($crumbs) .$value;
-                }else{
-                    $crumbs[$value] = end($crumbs) . '/'.$value;
+            foreach ($temp as $key => $value) {
+                if ($key == 0) {
+                    $crumbs[$value] = end($crumbs) . $value;
+                } else {
+                    $crumbs[$value] = end($crumbs) . '/' . $value;
                 }
             }
         }
