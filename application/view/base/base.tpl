@@ -8,7 +8,7 @@
     <meta name="author" content="CodeMommy.com">
     <meta name="keywords" content="CodeMommy Static File,">
     <meta name="description" content="ShareAny Static File For Free Forever
-。。ShareAny Static File。">
+。ShareAny Static File。">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon"
           href="//static.shareany.com/public/favicon/favicon.ico">
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
