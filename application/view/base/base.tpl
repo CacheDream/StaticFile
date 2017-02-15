@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{$title}CodeMommy Static File</title>
+    <title>{$title}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,8 +43,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Mirror <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{$root}?path=Mirror/BaiduCDN/">Baidu</a></li>
-                        <li><a href="{$root}?path=Mirror/StaticFile.org/">StaticFile.org</a></li>
+                        <li><a href="{$root}?path=Mirror/BaiduCDN">Baidu</a></li>
+                        <li><a href="{$root}?path=Mirror/StaticFile.org">StaticFile.org</a></li>
                         {*<li><a href="#">Another action</a></li>*}
                         {*<li><a href="#">Something else here</a></li>*}
                         {*<li role="separator" class="divider"></li>*}
@@ -54,15 +54,18 @@
                     </ul>
                 </li>
             </ul>
-            <!--<form class="navbar-form navbar-left" role="search">-->
-            <!--<div class="form-group">-->
-            <!--<input type="text" class="form-control" placeholder="Search">-->
-            <!--</div>-->
-            <!--<button type="submit" class="btn btn-default">Submit</button>-->
-            <!--</form>-->
+            {*<form class="navbar-form navbar-left" role="search">*}
+            <div class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                    <div class="input-group-addon">Search</div><input type="text" class="form-control" placeholder="Keyword" id="search_input">
+                    </div>
+                </div>
+            </div>
+            {*<button type="submit" class="btn btn-default">Search</button>*}
+            {*</form>*}
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{$root}?path=Help" target="_blank" title="Help">Help</a></li>
-                <li><a href="http://www.codemommy.com/" target="_blank" title="About">About</a></li>
+                <li><a href="https://github.com/CodeMommy/StaticFile" target="_blank" title="GitHub">GitHub</a></li>
                 <!--<li class="dropdown">-->
                 <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
                 <!--<ul class="dropdown-menu">-->
@@ -82,13 +85,31 @@
 <div class="container-fluid" style="padding:0;">
     {block name=main}{/block}
     <div style="text-align:center;">
-        <a href="http://www.qiniu.com/" target="_blank" title="Qiniu"><img
-                    src="http://assets.qiniu.com/qiniu-transparent.png"></a>
+        <a href="http://www.qiniu.com/" target="_blank" title="Qiniu">
+            <img src="http://assets.qiniu.com/qiniu-transparent.png">
+        </a>
     </div>
 </div>
 <div>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $("#search_input").on("input", function () {
+            $("#project").find("tr.project").each(function () {
+                var text = $.trim(String($(this).attr('data-text'))).toLowerCase();
+                var keyword = $.trim(String($("#search_input").val())).toLowerCase();
+                if (keyword == "") {
+                    $(this).show();
+                } else {
+                    if (text.indexOf(keyword) >= 0) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                }
+            });
+        });
+    </script>
 </div>
 <div class="hide">
     <script src="http://s6.cnzz.com/stat.php?id=5762705&web_id=5762705" language="JavaScript"></script>

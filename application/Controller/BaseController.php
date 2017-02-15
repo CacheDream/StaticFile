@@ -41,13 +41,13 @@ class BaseController extends Controller
             $this->data[$key] = $value;
         }
         if (empty($this->data['title'])) {
-            $this->data['title'] = '';
+            $this->data['title'] = Config::get('application.site_name');
         } else {
-            $this->data['title'] .= ' - ';
+            $this->data['title'] .= ' - ' . Config::get('application.site_name');
         }
         $this->data['root'] = Me::root();
-        if (Me::domain() == 'www.staticfile.net' || Me::domain() == 'staticfile.net') {
-            $this->data['static'] = 'http://static.shareany.com/product/staticfile';
+        if (in_array(Me::domain(), Config::get('application.domain'))) {
+            $this->data['static'] = Config::get('application.static');
         } else {
             $this->data['static'] = Me::root() . 'static';
         }

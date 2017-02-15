@@ -6,7 +6,7 @@ return array(
     // Route Configure
     // any, get, post...
     'get'  => array(
-        ''                       => 'HomeController.index'
+        '' => 'HomeController.index'
     ),
     'any'  => array()
 );

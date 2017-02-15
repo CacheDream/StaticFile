@@ -7,8 +7,8 @@
 
 namespace Controller;
 
-use CodeMommy\WebPHP\Input;
 use CodeMommy\WebPHP\Config;
+use CodeMommy\WebPHP\Input;
 use CodeMommy\WebPHP\Me;
 
 /**
@@ -130,12 +130,12 @@ class HomeController extends BaseController
         }
         // 面包削
         $crumbs = array();
-        $crumbs['Root'] = '/?path=';
+        $crumbs['Root'] = Me::root();
         if (!empty($path)) {
             $temp = explode('/', $path);
             foreach ($temp as $key => $value) {
                 if ($key == 0) {
-                    $crumbs[$value] = end($crumbs) . $value;
+                    $crumbs[$value] = Me::root() .'?path=' . $value;
                 } else {
                     $crumbs[$value] = end($crumbs) . '/' . $value;
                 }
