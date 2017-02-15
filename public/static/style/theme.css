@@ -1,0 +1,50 @@
+* {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+}
+
+.h2, h2 {
+    font-size: 24px;
+}
+
+.h3, h3 {
+    background-color: #1e82cc;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+pre {
+    border-radius: 0;
+}
+
+code {
+    margin: 0 5px;
+    border-radius: 0;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.well {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 9px 19px;
+}
+
+.navbar-toggle {
+    border-radius: 0;
+}
+
+.img-thumbnail {
+    border-radius: 0;
+}

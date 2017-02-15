@@ -1,0 +1,25 @@
+{
+  "name": "codemommy/staticfile",
+  "version": "1.0.1",
+  "description": "CodeMommy Static File is an open source project that provide static file cdn service for developers.",
+  "keywords": [
+    "Static File"
+  ],
+  "license": "Apache",
+  "homepage": "http://www.StaticFile.net",
+  "support": {
+    "issues": "https://github.com/CodeMommy/StaticFile/issues",
+    "source": "https://github.com/CodeMommy/StaticFile"
+  },
+  "authors": [
+    {
+      "name": "Candison November",
+      "email": "kandisheng@163.com",
+      "homepage": "http://www.kandisheng.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "codemommy/webphp": "1.1.*"
+  }
+}

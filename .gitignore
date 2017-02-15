@@ -1,2 +1,12 @@
-#*.php
-#.htaccess
+#IDE
+/.idea/
+
+#Composer
+/vendor/
+/composer.lock
+
+#Cache
+/application/cache/smarty_template/*.php
+/application/cache/smarty_cache/*.php
+/public/static/upload/*
+*.log
