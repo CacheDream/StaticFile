@@ -99,7 +99,7 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-        $("#search_input").on("input", function () {
+        function search() {
             $("#project").find("tr.project").each(function () {
                 var text = $.trim(String($(this).attr('data-text'))).toLowerCase();
                 var keyword = $.trim(String($("#search_input").val())).toLowerCase();
@@ -113,11 +113,20 @@
                     }
                 }
             });
+        }
+        $("#search_input").keydown(function () {
+            if (event.keyCode == "13") {
+                search();
+            }
+        });
+        $("#search_input").on("input", function () {
+            search();
         });
     </script>
 </div>
 <div class="hide">
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5762705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s6.cnzz.com/stat.php%3Fid%3D5762705' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_5762705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s6.cnzz.com/stat.php%3Fid%3D5762705' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
 </body>
 </html>
