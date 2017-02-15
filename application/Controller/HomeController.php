@@ -118,7 +118,8 @@ class HomeController extends BaseController
                 $array['link'] = Me::root() . '?path=' . $path . '/' . $file;
                 $array['cdn'] = $cdn . $path . '/' . $file;
             }
-            $list[$file] = $array;
+            $list[strtolower($file)] = $array;
+            ksort($list);
             // 读取Logo
             if (strtolower($file) == 'logo.png') {
                 $logo = $cdn . $path . '/' . $file;

@@ -91,7 +91,7 @@
     {block name=main}{/block}
     <div style="text-align:center;">
         <a href="http://www.qiniu.com/" target="_blank" title="Qiniu">
-            <img src="http://assets.qiniu.com/qiniu-transparent.png">
+            <img src="//assets.qiniu.com/qiniu-transparent.png">
         </a>
     </div>
 </div>
@@ -117,7 +117,7 @@
     </script>
 </div>
 <div class="hide">
-    <script src="http://s6.cnzz.com/stat.php?id=5762705&web_id=5762705" language="JavaScript"></script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5762705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s6.cnzz.com/stat.php%3Fid%3D5762705' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
 </body>
 </html>
