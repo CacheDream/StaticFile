@@ -2,8 +2,7 @@
 
 ## Overview
 
-
-> CodeMommy Static File is an open source project that provide static file cdn service for developers.
+> Cache of front-end library
 
 Visit [Website](http://www.staticfile.net) to get more information.
 

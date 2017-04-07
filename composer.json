@@ -1,7 +1,7 @@
 {
   "name": "codemommy/staticfile",
   "version": "1.0.1",
-  "description": "CodeMommy Static File is an open source project that provide static file cdn service for developers.",
+  "description": "Cache of front-end library",
   "keywords": [
     "Static File"
   ],
