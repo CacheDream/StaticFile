@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{$static}/style/theme.css">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -87,7 +87,7 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-<div class="container-fluid" style="padding:0;">
+<div class="container-fluid" style="padding:0;padding-top:50px;">
     {block name=main}{/block}
     <div style="text-align:center;">
         <a href="http://www.qiniu.com/" target="_blank" title="Qiniu">
